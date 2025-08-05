@@ -1,0 +1,41 @@
+
+:root { --max: 1100px; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:#222; background:#fff; }
+.container { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
+.site-header { background:#0f172a; color:#fff; }
+.site-header .container { display:flex; align-items:center; justify-content:space-between; height:64px; }
+.logo { font-weight:700; letter-spacing:.3px; }
+nav a { color:#cbd5e1; margin-left:16px; text-decoration:none; font-size:15px; }
+nav a:hover { color:#fff; }
+.admin-link { opacity:.8; }
+.hero { background: linear-gradient(180deg, #e2e8f0, #fff); padding:72px 0; text-align:left; }
+.hero h1 { font-size: 40px; margin:0 0 12px; }
+.hero .btn { margin-top:8px; }
+.section { padding:48px 0; }
+.cards-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.card { background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:16px; box-shadow:0 1px 2px rgba(0,0,0,.04); }
+.grid-posts { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:16px; }
+.post img { width:100%; height:180px; object-fit:cover; border-radius:8px; }
+.btn { display:inline-block; padding:10px 16px; border-radius:8px; border:1px solid #0f172a; background:#0f172a; color:#fff; text-decoration:none; cursor:pointer; }
+.btn.ghost { background:#fff; color:#0f172a; }
+.btn.small { padding:6px 10px; font-size: 12px; }
+.btn.danger { background:#b91c1c; border-color:#b91c1c; }
+.site-footer { background:#0f172a; color:#cbd5e1; padding:24px 0; }
+.contact-form .row { display:grid; grid-template-columns: repeat(3, 1fr); gap:10px; margin-bottom:10px; }
+.contact-form textarea { width:100%; height:140px; }
+.alert { background:#ecfccb; border:1px solid #84cc16; padding:10px 12px; border-radius:8px; margin-bottom:12px; }
+.alert.error { background:#fee2e2; border-color:#ef4444; }
+.grid-2 { display:grid; grid-template-columns: 1fr 1fr; gap:24px; }
+.narrow { max-width:520px; }
+.form label { display:block; font-size:14px; margin-bottom:8px; }
+.form input[type=text], .form input[type=password], .form input[type=email], .form input[type=tel], .form input[type=file], .form textarea {
+  width:100%; padding:10px; border:1px solid #e5e7eb; border-radius:8px; margin-top:6px;
+}
+.admin-posts .post-admin { display:grid; grid-template-columns: 120px 1fr auto; gap:12px; align-items:center; }
+.post-admin .thumb img { width:120px; height:80px; object-fit:cover; border-radius:8px; border:1px solid #e5e7eb; }
+@media (max-width: 900px) {
+  .cards-3 { grid-template-columns:1fr; }
+  .grid-2 { grid-template-columns:1fr; }
+  .contact-form .row { grid-template-columns:1fr; }
+}

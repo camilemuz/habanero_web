@@ -1,0 +1,255 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff8f0;
+  color: #1e1e1e;
+  line-height: 1.6;
+}
+
+/* Contenedor general */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Encabezado */
+.site-header {
+  background-color: #b91c1c;
+  color: white;
+  padding: 16px 0;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #fef2f2;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* sección principal */
+.hero {
+  background-color: #fff0e5;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+  color: #b91c1c;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  background-color: #f97316;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ea580c;
+}
+
+/* Secciones */
+.section {
+  padding: 60px 20px;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #b91c1c;
+}
+
+/* Tarjetas */
+.cards-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Portafolio */
+.grid-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.post img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.post h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #b91c1c;
+}
+
+/* Formulario 
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 10px;
+}
+
+.contact-form .row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.contact-form .row input {
+  flex: 1;
+}
+
+.contact-form textarea {
+  height: 140px;
+}
+
+.contact-form button {
+  background-color: #f97316;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #ea580c;
+}
+
+.site-footer {
+  background-color: #b91c1c;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+}
+  */
+
+/* Sección Contacto con fondo degradado */
+#contacto {
+  background: linear-gradient(135deg, #38b2ac, #319795); /* Fondo verde degradado */
+  padding: 60px 20px;
+  color: white;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 10px;
+}
+
+.contact-form button {
+  background-color: #f97316;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #ea580c;
+}
+
+.contact-form .row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.contact-form .row input {
+  flex: 1;
+}
+
+.contact-form textarea {
+  height: 140px;
+}
+
+.site-footer {
+  background-color: #b91c1c;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  .site-header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    margin: 10px 10px 0 0;
+  }
+
+  .contact-form .row {
+    flex-direction: column;
+  }
+}
