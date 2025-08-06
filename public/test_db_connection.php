@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/config/config.php'; // Asegúrate de que la ruta es correcta
+require_once __DIR__ . '/../config/config.php'; 
 
 try {
     $pdo = new PDO(
