@@ -77,7 +77,7 @@ $posts = posts_all();
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Panel de administración</title>
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles1.css">
 </head>
 <body>
 <header class="site-header">

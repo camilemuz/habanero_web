@@ -1,17 +1,25 @@
 <?php
 require_once __DIR__ . '/../config/config.php';
 require_once __DIR__ . '/../lib/posts.php';
+
+// Iniciar sesión
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+}
+
 $posts = posts_all();
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?= htmlspecialchars($SITE_NAME) ?></title>
-  <link rel="stylesheet" href="assets/styles1.css">
+  <link rel="stylesheet" href="assets/styles1.css"> <!-- Vincula el CSS aquí -->
 </head>
 <body>
+
 <header class="site-header">
   <div class="container">
     <div class="logo">Habanero Web</div>
@@ -21,7 +29,12 @@ $posts = posts_all();
       <a href="#portafolio">Portafolio</a>
       <a href="#servicios">Servicios</a>
       <a href="#contacto">Contacto</a>
-      <a class="admin-link" href="login.php">Administrador</a>
+      
+      <?php if (isset($_SESSION['admin_id'])): ?>
+        <!-- Mostrar enlace a Administrador solo si el usuario está logueado como administrador -->
+        <a href="admin.php">Administrador</a>
+        <a href="logout.php">Cerrar sesión</a>
+      <?php endif; ?>
     </nav>
   </div>
 </header>
@@ -40,7 +53,7 @@ $posts = posts_all();
     <div class="cards-3">
       <div class="card">
         <h3>Confianza</h3>
-        <p>Confia en nosotros</p>
+        <p>Confía en nosotros</p>
       </div>
       <div class="card">
         <h3>Empatía</h3>
@@ -102,5 +115,6 @@ $posts = posts_all();
     <p>Dirección: Lorem ipsum dolor sit amet, consectetuer.</p>
   </div>
 </footer>
+
 </body>
 </html>

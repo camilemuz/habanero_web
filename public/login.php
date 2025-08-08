@@ -26,7 +26,7 @@ $token = csrf_token();
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Iniciar sesión</title>
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles1.css">
 </head>
 <body>
 <div class="container section narrow">
