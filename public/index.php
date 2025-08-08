@@ -31,7 +31,7 @@ $posts = posts_all();
       <a href="#contacto">Contacto</a>
       
       <?php if (isset($_SESSION['admin_id'])): ?>
-        <!-- Mostrar enlace a Administrador solo si el usuario está logueado como administrador -->
+        <!-- logueado como administrador -->
         <a href="admin.php">Administrador</a>
         <a href="logout.php">Cerrar sesión</a>
       <?php endif; ?>
